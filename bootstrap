@@ -1,0 +1,33 @@
+1
+  new button ya!!
+  <button class="btn">whatever</button>
+  if you want that button to be as long as possible then use "btn-block",change color by using "btn-info" or "btn-primary" or "btn-danger"
+  you can also add a "thumbs up" to your button with i element:
+  <i class="fa fa-thumbs-up"></i>
+  <i class="fa fa-info-circle"></i>
+  <i class="fa fa-trash"></i>
+  <i class="fa fa-paper-plane"></i>
+
+
+2
+  picture ya!!
+  most of time we use "img-responsive"
+  <img class="img-responsive" src="">
+
+
+3
+ bootstrap grid system is very usefull!
+  <div class="row">
+    <div class="col-xs-8">
+      <p></p>
+    </div>
+    <div class="col-xs-4">
+      <table></table>
+    </div>
+  </div>
+
+4
+  The i element was originally used to make other elements italic, but is now commonly used for icons. 
+  You add the Font Awesome classes to the i element to turn it into an icon, for example:
+
+  <i class="fa fa-info-circle"></i>
