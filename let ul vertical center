@@ -1,0 +1,47 @@
+
+12
+down vote
+Surprisingly (or not), the vertical-align tool actually works best for this job. Best of all, no Javascript is required.
+
+In the following example, I am positioning the outer class in the middle of the body, and the inner class in the middle of the outer class.
+
+Preview: http://jsfiddle.net/tLkSV/513/
+
+HTML:
+
+<div id="container">
+    <span></span><div class="outer">
+        <span></span><div class="inner">
+
+        </div>
+    </div>
+</div>
+CSS:
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+#container {
+    text-align: center;
+    height: 100%; }
+span { 
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block; }
+.outer {
+    width: 100px;
+    height: 200px;
+    padding: 0;
+    border: 1px solid #000;
+    vertical-align: middle;
+    display: inline-block; }
+.inner {
+    background: red;
+    width: 30px;
+    height: 20px;    
+    vertical-align: middle;
+    display: inline-block; }
+Vertical align works by aligning the centers of elements that are next to each other. Applying vertical-align to a single element does absolutely nothing. If you add a second element that has no width but is the height of the container, your single element will move to vertically center with this no-width element, thus vertically centering it. The only requirements are that you set both elements to inline (or inline-block), and set their vertical-align attribute to vertical-align: middle.
+
+Note: You may notice in my code below that my <span> tag and <div> tag are touching. Because they are both inline elements, a space will actually add a space between the no-width element and your div, so be sure to leave it out.
