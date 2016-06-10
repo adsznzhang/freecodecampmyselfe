@@ -1,1 +1,30 @@
 Text inside of <li> tag goes out of screen
+
+2
+down vote
+accepted
+You have several options. Here are the first that come to my mind:
+
+The first is width:100%; overflow:hidden;. This will "clip" any text that goes beyond the edge of the page.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+
+The second is word-break:break-all;. This allows your text to wrap onto a new line between any two letters.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
+
+The third -- and what I would recommend -- is the <wbr> tag. This tells the browser where it's "allowed" to put breaks in long words. If there's no need to break the words then it won't, unlike <br> or a space character.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
+
+The fourth is the text-overflow property. This gives you more nuanced control over how your text appears when it's too long, but won't affect wrapping.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow
+
+The fifth is the &shy; special character. This tells the browser that it can break a word and wrap it to the next line using a hyphen. Like <wbr>, this is applied only when necessary.
+
+Soft hyphen in HTML (<wbr> vs. &shy;)
+
+The sixth is word-wrap:break-word;. This tells the browser that it can break long words between any two letters. This is a better choice than word-break because that tells the browser to break between any two letters without being limited to long words. (The fact that these two are separate things drives me bonkers.)
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/word-wrap
