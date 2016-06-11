@@ -1,0 +1,121 @@
+    $('.handle').on('click', function(){
+        $('nav > ul').toggleClass('showing');
+    });
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background: #00795f;
+    width: 100%;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    background-color: #43a286;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    visibility:hidden;
+    height:0;
+    max-height:20em;
+    overflow:scroll;
+}
+nav ul li a {
+    box-sizing: border-box;
+    display:block;
+    padding: 1.2em;
+    text-align: left;
+    line-height:1.2em;
+}
+.showing {
+    height:auto;
+    visibility:visible;
+}
+
+nav ul li:hover {
+    background-color: #399077;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    height:auto;
+    background-color:green;
+}
+
+.handle {
+    background: #005c48;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.handle img {
+    display: inline-block;
+    width: 40px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+    .handle {
+        display: none;
+	}
+
+    nav ul {
+         overflow:visible;
+    }
+
+	nav > ul {
+        height:auto;
+        visibility:visible;
+        text-align:center;
+        margin:0 auto;
+	}
+    
+    nav > ul > li {
+        display:inline-block;
+        position:relative;
+    }
+
+	nav > ul > li > ul {
+        position:absolute;
+    }
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<body>
+    <header>
+    <div class="logo">
+        <a href="#">LOGO GOES HERE</a>
+    </div>
+</header>
+<nav>
+    <ul> 
+        <li><a href="#" alt="portfolio" >home</a></li>
+        <li><a href="#" alt="portfolio" >portfolio</a>
+            <ul>
+                <li><a href="#" alt="paintings" >paintings</a></li>
+                <li><a href="#" alt="drawings" >drawings</a></li>
+                <li><a href="#" alt="photography" >photography</a></li>
+            </ul>
+        </li>
+        <li><a href="#" alt="about the artist" >about</a></li>
+        <li><a href="#" alt="contact information" >contact</a></li>
+    </ul>
+    <div class="handle">
+        <h4>menu</h4>
+    </div>
