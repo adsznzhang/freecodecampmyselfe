@@ -1,1 +1,16 @@
+when I first did this algorithm. I found the following description is sooooo useful!! They explain how to control a string in 
+details! I hope you can read them carefully. Trust me it will help you a lot !!
 
+the following link exlpains string in details:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+next step is to split string into array:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+then we need reserve that array:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+
+lastly in order to make that array without anything between each element we need join method:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+I will give my own explaination on each method late !
