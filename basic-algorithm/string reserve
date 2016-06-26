@@ -14,3 +14,7 @@ lastly in order to make that array without anything between each element we need
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 I will give my own explaination on each method late !
+
+function reverseString(str) {
+  return str.split('').reverse().join("");
+}
