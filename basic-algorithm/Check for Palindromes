@@ -1,0 +1,25 @@
+This one seems not difficult...but when I first time did I found it was difficult because I knew nothing about regular expression...
+It is better to use replace()method. So it is more about reular expression rather than the algorithm itself!
+
+here is the explaination for basic regular expression:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+
+
+
+
+
+
+
+
+function palindrome(str) {
+  // Good luck!
+  var newstr = '';
+  newstr = str.replace(/[^0-9a-z]/gi, '');
+  if((newstr.toLowerCase())== (newstr.toLowerCase().split('').reverse().join("")) ) { 
+    return true;
+  }
+  else {
+    return false;
+  }
+}
