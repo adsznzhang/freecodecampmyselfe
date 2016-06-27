@@ -1,0 +1,27 @@
+This one is a very nice topic! You do have a lot of methods to solve this problem! However I followed my logic. The whole idea it to put 
+splited string into a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function findLongestWord(str) {
+  var newstr = [];
+  newstr = str.split(' ');
+  var b = newstr[0].length;
+  for (var i = 0; i < newstr.length-1; i++) {
+    if(newstr[i+1].length > b){
+      b = newstr[i+1].length;
+    } 
+  }
+  return b;
+}
