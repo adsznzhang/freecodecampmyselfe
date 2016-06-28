@@ -1,0 +1,16 @@
+so tired to finish this one, have been working for 14 hours . I see hope and I am very happy to study after work. I get more energy when I am 
+studying new things rather than "working"
+
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  var newstr = [];
+  newstr = str.split(" ");
+  var a = newstr[newstr.length-1];
+  if(a.substring(a.length-target.length) == target) {
+    return true;
+  }
+   else {
+     return false;
+   }
+}
