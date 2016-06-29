@@ -1,0 +1,21 @@
+So for this problem I think the key is to use str.indexOf method!  We can use it to test occurrences! just split the one we want to test and pass
+each element to indexOf() method... thats it!
+
+
+function mutation(arr) {
+  var count = 0;
+  var newarr1 = arr[0].toLowerCase();
+  var newarr2 = arr[1].toLowerCase().split("");
+  for(var i = 0; i < newarr2.length; i++) {
+    if(newarr1.indexOf(newarr2[i]) !== -1){
+      count++;
+    }
+  }
+  if(count == newarr2.length){
+    return true;
+  }
+  else {
+    return false;
+  }
+  
+}
