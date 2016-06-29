@@ -1,0 +1,15 @@
+The key poing for this one is to understand that:
+ <1>array.slice(argument1, argument2) method will return an array
+ <2>if the second argument bigger than the sliced array it will cut to the end of that array!!!
+
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  var newarr = [];
+  var i = 0;
+  while(i < arr.length) {
+    newarr.push(arr.slice(i,i+size));
+    i += size;
+  }
+  return newarr;
+}
