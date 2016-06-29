@@ -1,0 +1,14 @@
+At the begining I didnt think out all conditions. So I checked with those example and added extra conditions one by one...
+
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if((str.length-num) > 3 && num > 3) {
+    return str.slice(0,num-3)+"...";
+  }
+  else if ((str.length-num) > 0) {
+    return str.slice(0,num)+ "...";
+  }
+  else if(str.length==num || str.length < num){
+    return str;}
+}
