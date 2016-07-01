@@ -1,0 +1,25 @@
+the key for this problem is to understand 65-77 belongs to lowercase, 78-90 belongs to uppercase~ so lowercase plus 13, uppercase minus 13! n
+another key point is to use a string variable to store those character!
+
+
+
+function rot13(str) { // LBH QVQ VG!
+var charCode = 0;
+var newStr = "";
+
+for (i = 0; i < str.length; i++) {
+charCode = str.charCodeAt(i);
+
+if (charCode >= 65 && charCode <= 77 ){
+  newStr += String.fromCharCode(charCode + 13);
+} 
+else if (charCode >= 78 && charCode <= 90 ) {
+  newStr += String.fromCharCode(charCode - 13);
+}    
+else {
+  newStr += String.fromCharCode(charCode);
+}
+
+}
+return newStr;
+}
