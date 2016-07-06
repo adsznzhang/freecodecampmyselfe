@@ -1,0 +1,17 @@
+The key is to creat another arr depending on giving range:) 
+
+
+
+function sumAll(arr) {
+  
+  var max = Math.max.apply(null, arr);
+  var min =  Math.min.apply(null, arr);
+  var newarr = [];
+  for (var i = min; i <= max; i++){
+    newarr.push(i);
+  }
+  var total = newarr.reduce(function(min,max){
+    return min+max;
+  },0);
+  return total;
+}
