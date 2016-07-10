@@ -1,0 +1,24 @@
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  var a = 0;
+  
+ var newarr = Object.keys(source);
+  for(var i = 0; i < collection.length; i++){
+    a=0;
+    for(var j = 0;j< newarr.length; j++){
+     
+      if(collection[i].hasOwnProperty(newarr[j]) && source[newarr[j]] == collection[i][newarr[j]]){
+        a++;
+      }
+      if(a == newarr.length){
+      arr.push(collection[i]);
+       
+      }   
+    }
+  }
+  // Only change code above this line
+ return arr;
+}
