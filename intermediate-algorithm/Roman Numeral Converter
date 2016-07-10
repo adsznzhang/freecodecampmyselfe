@@ -1,0 +1,25 @@
+SO for this problem I did check the answer first....and I found it was so easy...The key for this problem is that you have to have 
+a idea the changing of roman number. The character only changes at position 1, 4, 5, 9, 10, 40, 50, 90, 100,....so what we need to do 
+is to make a pattern for those numbers. 
+
+For example 1 maps as "I" any number among 1 to 3 we only add "I", 4 maps as "IV", 5 maps as "V"
+any numeber among 5 to 8 we only add "I".....etc
+
+
+
+
+
+function convertToRoman(num) {
+  
+  var decimalvalue = [1000, 900, 500, 400, 100, 90,50, 40,10, 9, 5, 4, 1];
+  var romannum = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+
+  var romanized = "";
+  for(var i = 0; i < decimalvalue.length; i++){
+    while(decimalvalue[i] <= num){
+      romanized += romannum[i];
+      num -= decimalvalue[i];
+    }
+  }
+ return romanized;
+}
