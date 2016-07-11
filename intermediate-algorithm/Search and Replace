@@ -1,0 +1,32 @@
+
+Here is the basic answer for this problem....
+function myReplace(str, before, after) {
+  // Find index where before is on string
+  var index = str.indexOf(before);
+  // Check to see if the first letter is uppercase or not
+  if (str[index] === str[index].toUpperCase()) {
+    // Change the after word to be capitalized before we use it.
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  }
+  // Now replace the original str with the edited one.
+  str = str.replace(before, after);
+
+  return str;
+}
+
+
+I dont know why the following code doesnt pass that test... The problem is to check the frist letter in before is uppercase or lowercase, but 
+it seems doent work for me! if you know the reason please tell me ! Thank you! 
+
+function myReplace(str, before, after) {
+  
+  var newstr="";
+  if(before.charAt(0) === before.charAt(0).toUpperCase){
+     after = after.charAt(0).toUpperCase() + after.slice(1);
+    newstr = str.replace(before, after);
+  }
+  else {
+     newstr = str.replace(before, after);
+  }
+  return newstr;
+}
