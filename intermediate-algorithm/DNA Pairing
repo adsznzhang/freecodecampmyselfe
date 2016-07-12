@@ -1,0 +1,29 @@
+
+OK lets figure out this one. I did get stuck a little bit on creating 2d array!  I did some research online and picked the eaiest one. I do 
+think there could be a lot of tricks behind... Second points is to using split methd dont forget passing "" to it... otherwise it wont work!
+becasue the default is....check yourself!!https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+
+function pairElement(str) {
+  
+  var newstr = str.split('');
+  var newarr = [];
+  for (var i = 0; i < newstr.length; i++) {
+   newarr[i] = [];
+   switch(newstr[i]){
+      case "A":
+        newarr[i].push("A","T");
+       break;
+      case "T":
+        newarr[i].push("T","A");
+        break;
+      case "C":
+        newarr[i].push("C","G");
+        break;
+      case "G":
+        newarr[i].push("G","C");
+        break;
+   }
+ }
+  return newarr;
+}
