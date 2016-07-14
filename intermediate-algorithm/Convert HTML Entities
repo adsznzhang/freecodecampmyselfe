@@ -1,0 +1,30 @@
+
+
+
+function convertHTML(str) {
+  // &colon;&rpar;
+  var newstr = str.split("");
+  for(var i = 0; i < newstr.length; i++){
+    switch(newstr[i]){
+        
+      case '<':
+        newstr[i] = '&lt;';
+        break;
+      case '&':
+        newstr[i] = '&amp;';
+        break;
+      case '>':
+        newstr[i] = '&gt;';
+        break;
+      case '"':
+        newstr[i] = '&quot;';
+        break;
+      case "'":
+        newstr[i] = "&apos;";
+        break;
+    }
+  }
+  var finalarr = newstr.join("");
+  return finalarr;
+  
+}
