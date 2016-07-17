@@ -1,0 +1,14 @@
+function sumFibs(num) {
+  var newarr = [];
+  newarr [0] =1;
+  newarr [1] =1;
+  var sum = 0;
+  for(var i = 1; i < num; i++){
+    newarr[i+1] = newarr[i]+newarr[i-1];
+    if (newarr[i] <= num & (newarr[i]%2 !== 0)) {
+        sum += newarr[i];
+        }
+  }
+  
+  return sum+1;
+}
