@@ -1,0 +1,31 @@
+this is most difficult part of this problem and I did it by myself:) I know the solution is not suitable for large number...but it works....
+so basicly :A simple but slow method of verifying the primality of a given number n is known as trial division. 
+It consists of testing whether n is a multiple of any integer between 2 and sqrt {n}... I copied this from wiki..so i followed the rule and 
+made my solution to caculate primes number:)
+
+The key is the flag and for loop. These two only for testing one number...you have to keep this in mind by using this method!
+
+
+function sumPrimes(num) {
+  var n =0;
+  var newarr = [];
+  var f=0;
+  while(n<=num){
+    if (n<2) {
+    }
+    else{
+        var q = Math.floor(Math.sqrt(n));
+        for(var i = 2; i <=q; i++){
+        if(n%i === 0){
+        f++;
+        }
+        }
+        if(f === 0){
+        newarr.push(n);
+        }
+       f=0;
+    }
+    n++;
+  }
+  return newarr[4];
+}
