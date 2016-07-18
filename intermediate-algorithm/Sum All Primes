@@ -3,7 +3,7 @@ so basicly :A simple but slow method of verifying the primality of a given numbe
 It consists of testing whether n is a multiple of any integer between 2 and sqrt {n}... I copied this from wiki..so i followed the rule and 
 made my solution to caculate primes number:)
 
-The key is the flag and for loop. These two only for testing one number...you have to keep this in mind by using this method!
+The keys are  flag variable and for loop. These two are only for testing one number...you have to keep this in mind by using this method!
 
 
 function sumPrimes(num) {
