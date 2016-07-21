@@ -1,0 +1,9 @@
+
+it will return an array . So be aware of that! just get the first element:) thats it! But filter is a very usefull function!!
+
+function findElement(arr, func) {
+ var filted = arr.filter(func);
+  return filted[0];
+}
+
+findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
