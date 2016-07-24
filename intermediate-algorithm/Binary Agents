@@ -1,0 +1,13 @@
+
+The key for this problem is to understand parseInt method and dont forget to join them with "" because white spaces are also in binary...
+
+
+
+function binaryAgent(str) {
+  var newstr = str.split(" ");
+  var new1str = [];
+  for(var i = 0; i < newstr.length; i++){
+    new1str.push(String.fromCharCode(parseInt(newstr[i],2)));
+  }
+  return new1str.join("");
+}
