@@ -3,3 +3,10 @@ function flatten(arr) {
     return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
   }, []);
 }
+
+
+ it's the starting accumulator value for the reduce function, what mdn calls the initial value. 
+ In this case it's the value of flat in the first call to the anonymous function passed to reduce.
+ If it is not specified, then the first call to reduce binds the first value out of the array to flat, 
+ which would eventually result in 1 being bound to flat in both the examples. 
+ 1.concat is not a function. 
