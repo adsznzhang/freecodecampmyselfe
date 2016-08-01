@@ -1,3 +1,7 @@
+for this problem i dont understand why we have to put result in function sysDiff? why we cant put it in function sym as a globle variable?
+
+I have to work on it later!!!
+
 
 function sym() {
     var args = [];
