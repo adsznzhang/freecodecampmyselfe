@@ -1,0 +1,31 @@
+
+umm this one I dont know how to explain...I think its better to read js documents....
+
+
+var Person = function(firstAndLast) {
+  var name = firstAndLast.split(" ");
+  
+  this.getFirstName = function(){
+    return name[0];
+  };
+    this.getLastName = function(){
+      return name[1];
+    };
+  this.getFullName = function() {
+    return name.join(" ");
+  };
+  
+  this.setFirstName = function(na){
+    name[0] = na;
+    
+  };
+  this.setLastName = function(na){
+    name[1] = na;
+  };
+  this.setFullName = function(na){
+    name = na.split(" ");
+  };
+};
+
+var bob = new Person('Bob Ross');
+bob.getFirstName();
